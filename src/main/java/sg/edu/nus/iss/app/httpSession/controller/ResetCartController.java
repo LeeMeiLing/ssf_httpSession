@@ -12,7 +12,10 @@ public class ResetCartController {
     
     @GetMapping
     public String resetCart(HttpSession session){
+
+        System.out.println("In resetCart : " + session.getId()); // debug
         session.invalidate();
-        return "cart";
+        return "redirect:/cart";
+
     }
 }

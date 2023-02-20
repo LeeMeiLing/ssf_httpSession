@@ -19,6 +19,7 @@ public class ShoppingCartController {
     @GetMapping
     public String getCart(Model model,HttpSession session){
 
+        System.out.println("In GetMapping : " + session.getId()); // debug
         Cart cart = (Cart) session.getAttribute("cart");
 
         if(null==cart){
@@ -33,6 +34,8 @@ public class ShoppingCartController {
 
     @PostMapping
     public String postData(@Valid Item item, BindingResult result, Model model, HttpSession session){
+
+        System.out.println("In PostMapping : " + session.getId()); // debug
 
         Cart cart = (Cart) session.getAttribute("cart");
         if(result.hasErrors()){

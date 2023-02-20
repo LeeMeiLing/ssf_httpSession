@@ -23,10 +23,10 @@ public class Item implements Serializable{
     public void setName(String name) {
         this.name = name;
     }
-    public float getQuantity() {
+    public Float getQuantity() {
         return quantity;
     }
-    public void setQuantity(float quantity) {
+    public void setQuantity(Float quantity) {
         this.quantity = quantity;
     }
 
